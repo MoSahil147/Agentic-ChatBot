@@ -1,8 +1,11 @@
 langchain
 langgraph
+python-dotenv
 langchain_community
 langchain_core
-langchain_gorq
+langchain_groq
+langchain-groq 
+streamlit
 langchain_openai
 faiss-cpu
 streamlit
