@@ -1,2 +1,4 @@
 venv/
 Zip archive/
+.DS_Store/
+.env
