@@ -10,3 +10,13 @@ langchain_openai
 faiss-cpu
 streamlit
 tavily-python
+langchain
+langgraph
+langchain-community
+langchain-core
+langchain-openai
+langchain-groq
+python-dotenv
+streamlit
+faiss-cpu
+tavily-python
