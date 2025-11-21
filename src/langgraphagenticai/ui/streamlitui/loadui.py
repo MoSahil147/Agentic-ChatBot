@@ -10,7 +10,7 @@ class LoadStreamlitUI:
         
     def load_streamlit_ui(self):
         st.set_page_config(page_title= "ChatBot " + self.config.get_page_title(), layout="wide")
-        st.header("ChatBot" + self.config.get_page_title())
+        st.header("ChatBot " + self.config.get_page_title())
         
         with st.sidebar:
             ## Get options from config
@@ -32,7 +32,13 @@ class LoadStreamlitUI:
                     
             ## USecase selection
             self.user_controls["selected_usecase"]=st.selectbox("Select Usecases", usecase_options)
-        
+            
+            if self.user_controls["selected_usecase"]== "Chatbot With Web":
+                os.environ["TAVILY_API_KEY"]=self.user_controls["TAVILY_API_KEY"]=st.session_state["TAVILY_API_KEY"]=st.text_input("TAVILY API KEY", type="password")
+
+                ## Validate the API key
+                if not self.user_controls["TAVILY_API_KEY"]:
+                    st.warning("Please enter your TAVILY_API_KEY to proceed. If you dont have, please get it!")
         return self.user_controls
 
 
